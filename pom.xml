@@ -73,6 +73,13 @@
 		<artifactId>commons-dbutils</artifactId>
 		<version>1.6</version>
 	</dependency>
+	
+	<!-- Jackson  -->
+   <dependency>
+        <groupId>org.codehaus.jackson</groupId>
+        <artifactId>jackson-mapper-asl</artifactId>
+        <version>1.9.4</version>
+   </dependency>
   </dependencies>
   <build>
     <plugins>
