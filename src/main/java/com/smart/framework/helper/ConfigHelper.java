@@ -38,4 +38,12 @@ public class ConfigHelper {
     public static String getAppBasePackage() {
         return PropsUtils.getString(props, ConfigConstant.APP_BASE_PACKAGE);
     }
+    
+    public static String getAppJspPath() {
+        return PropsUtils.getString(props, ConfigConstant.APP_JSP_PATH);
+    }
+
+    public static String getAppAssetPath() {
+        return PropsUtils.getString(props, ConfigConstant.APP_Asset_PATH);
+    }
 }
