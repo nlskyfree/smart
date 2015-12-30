@@ -18,7 +18,7 @@ import com.smart.framework.utils.ClassUtils;
  *
  */
 public class HelperLoader {
-    static {
+    public static void init() {
         Class<?>[] classList = {
                 ClassHelper.class,
                 BeanHelper.class,
@@ -28,5 +28,5 @@ public class HelperLoader {
         for(Class<?> clazz : classList) {
             ClassUtils.loadClass(clazz.getName());
         }
-    }
+    } 
 }
