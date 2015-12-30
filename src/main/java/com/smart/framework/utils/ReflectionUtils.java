@@ -1,7 +1,6 @@
 package com.smart.framework.utils;
 
 import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 import org.slf4j.Logger;
@@ -32,9 +31,9 @@ public class ReflectionUtils {
         return instance;
     }
     
-    public static void invokeMethod(Object obj, Method method, Object... args)  {
+    public static Object invokeMethod(Object obj, Method method, Object... args)  {
         try {
-            method.invoke(obj, args);
+            return method.invoke(obj, args);
         }catch (Exception e) {
             LOGGER.error(obj.getClass().getName() + " invoke method " + method.getName() + " failure!", e);
             throw new RuntimeException(e);

@@ -135,4 +135,19 @@ public class ClassUtils {
     public static ClassLoader getClassLoader() {
         return ClassUtils.class.getClassLoader();
     }
+    
+    public static Class<?> loadClass(String className, Boolean isInitialized) {
+        Class<?> clazz;
+        try {
+            clazz = Class.forName(className, isInitialized, getClassLoader());
+        } catch(Exception e) {
+            LOGGER.error("load class failure", e);
+            throw new RuntimeException(e);
+        }
+        return clazz;
+    }
+    
+    public static Class<?> loadClass(String className) {
+        return loadClass(className, true);
+    }
 }
